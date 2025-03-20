@@ -113,6 +113,10 @@ If your app uses images or other resource files:
 ```bash
 pyinstaller --add-data "images;images" --add-data "resources;resources" your_script.py
 ```
+Example: icon.ico is in root directory, '.' is destination directory of icon.ico (root of the exe)
+```bash
+pyinstaller --onefile --windowed --add-data "icon.ico;." --icon=icon.ico --name "Notebook-xlsx" Notebook-xlsx.py
+```
 
 ### Tkinter Issues
 For Tkinter-specific issues:
